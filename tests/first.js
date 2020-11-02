@@ -28,7 +28,7 @@ fixture('testcafe demo')
         })
 
 
-const pin = 'ozgurgerilla@gmail.com';
+const pin = '001705261A';
 const password = 'gogogo'
 
 test('cii login', async t =>
@@ -38,7 +38,7 @@ test('cii login', async t =>
     .typeText(login.pinEl,pin)
     .typeText(login.passwordEl,password)
     .click(login.loginButtonEl)
-    .expect(login.dashboardPinEl.innerText).eql('001705261A');
+    .expect(login.dashboardPinEl.innerText).eql(pin);
 
 })
 
