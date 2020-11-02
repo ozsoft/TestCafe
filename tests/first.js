@@ -7,6 +7,7 @@ const login = new Login();
 
 //https://devexpress.github.io/testcafe/example/
 
+//hooks
 fixture('testcafe demo')
     .page('https://www.cii.co.uk')
     .before(async t=>
@@ -41,5 +42,3 @@ test('cii login', async t =>
     .expect(login.dashboardPinEl.innerText).eql(pin);
 
 })
-
-

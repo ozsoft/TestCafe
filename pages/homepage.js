@@ -1,35 +1,13 @@
 
+import { Selector } from 'testcafe';
 
-
-class Homepage
+export default class Homepage
 {
 
-    visit()
+    constructor()
     {
-        cy.visit("https://www.cii.co.uk");
+        this.loginLink = Selector('#login-link')
+        this.signupLink = Selector('#sign-up-link')
     }
-
-    clickLogin()
-    {
-
-        const login = cy.get('[id=login-link]')
-        login.click()
-        return this
-
-    }
-
-    clickSignup()
-    {
-
-        const signup = cy.get('[id=sign-up-link]')
-        signup.click()
-        return this
-
-    }
-
-
-
 
 }
-
-export default Homepage;
