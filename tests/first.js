@@ -37,8 +37,10 @@ test('cii login', async t =>
     await t
     .click(login.loginEl)
     .typeText(login.pinEl,pin)
+    .takeElementScreenshot(login.pinEl)
     .typeText(login.passwordEl,password)
     .click(login.loginButtonEl)
-    .expect(login.dashboardPinEl.innerText).eql(pin);
+    .expect(login.dashboardPinEl.innerText).eql(pin)
+    .takeScreenshot();
 
 })
